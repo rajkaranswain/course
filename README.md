@@ -8,4 +8,7 @@
 
 ### Screenshot
 
-[comment]: <screenshot of the app>
+- Hello World App Screenshot:
+
+ <img src = "https://github.com/saswatsamal/course/blob/master/_imgs/1.jpg" width=200>
+
