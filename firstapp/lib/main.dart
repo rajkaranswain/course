@@ -9,8 +9,11 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   //MyApp is the core class
+  var questionindex = 0 ;
+  //it cant be called inside the build because it will reset when it is called repeatedly
   void answerquestion()
   {
+    questionindex+=1;
     print('Answer chosen');
   }
   @override
@@ -23,9 +26,12 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Text('the question'),
+              Text(question[questionindex]),
+              //button 1
               RaisedButton(child: Text('answer 1'), onPressed: answerquestion),
+              //button
               RaisedButton(child: Text('answer 2'), onPressed: answerquestion),
+              //button 3
               RaisedButton(child: Text('answer 3'), onPressed: answerquestion),
             ],
           )),
