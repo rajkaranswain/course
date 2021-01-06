@@ -9,13 +9,13 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   //MyApp is the core class
-  var questionindex = 0 ;
-  //it cant be called inside the build because it will reset when it is called repeatedly
-  void answerquestion()
-  {
-    questionindex+=1;
+  var questionindex = 0;
+  //it cant be called inside the build because it will reset when it is called repeatedl
+  void answerquestion() {
+    questionindex += 1;
     print('Answer chosen');
   }
+
   @override
   Widget build(BuildContext context) {
     var question = ['whats your favraite colour', 'what is your fav animal'];
