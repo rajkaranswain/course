@@ -7,12 +7,23 @@ void main() => runApp(MyApp());
 //exposes the material.dart package
 //tagets the the build method
 
-class MyApp extends StatelessWidget {
-  //MyApp is the core class
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+//MyApp is the core class
+class MyAppState extends State<MyApp> {
+  //State<MyApp> provides the ground that it holds the changes for Myapp class
   var questionindex = 0;
   //it cant be called inside the build because it will reset when it is called repeatedl
   void answerquestion() {
-    questionindex += 1;
+    setState(() {
+      questionindex += 1;
+    });
+
     print('Answer chosen');
   }
 
